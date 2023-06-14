@@ -8,7 +8,7 @@ namespace TaskFour
 {
     public class Drone : IFlyable
     {
-        //the impossibility of flying a drone at a distance of more than 1000 km
+        //drone cannot fly more than 1000 km
         private Coordinate currentPosition;
         public Coordinate CurrentPosition { get { return currentPosition; } set { currentPosition = new Coordinate(Math.Abs(value.X - currentPosition.X) <= 1000 ? value.X : 1000, value.Y, Math.Abs(value.Z - currentPosition.Z) <= 1000 ? value.Z : 1000); } }
 
